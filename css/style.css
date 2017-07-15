@@ -4,9 +4,8 @@
 }
 
 .quote {
-  font-size: 4em;
+  font-size: 3em;
   font-style: italic;
-  font-weight: bold;
   text-align: center;
   top: 33%;
 }
@@ -17,4 +16,27 @@ body {
   color: white;
   letter-spacing: normal;
   background-color: #6a9ad8;
+}
+
+.button {
+  position: absolute;
+  bottom: 300px;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #2c61b7;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #20498c}
+
+.button:active {
+  background-color: #20498c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
