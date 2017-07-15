@@ -1,1 +1,20 @@
-s
+.source {
+  position: absolute;
+  right: 100px;
+}
+
+.quote {
+  font-size: 4em;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  top: 33%;
+}
+
+body {
+  font-size: medium;
+  font-family: Veranda, Geneva, Arial, sans-serif;
+  color: white;
+  letter-spacing: normal;
+  background-color: #6a9ad8;
+}
