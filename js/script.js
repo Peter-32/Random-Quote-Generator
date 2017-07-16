@@ -1,18 +1,13 @@
 'use strict';
 
-// Copy the array to a new variable.
-// This will hold the remaining quotes that haven't been shown.
-let remainingQuotes = quotes.slice();
-
-function print(message) {
-  var outputDiv = document.getElementById("output");
-  outputDiv.innerHTML = message;
-}
+///////////////////////////
+// START OF OF FUNCTIONS //
+///////////////////////////
 
 // Return a random quote object.
 // There are 19 quote objects defined in the "quotes.js" file.
 // Loops through all 19 quotes before showing the same quotes again.
-function getRandomQuote() {
+const getRandomQuote = () => {
   // If the quotes array is empty, restore the list.
   if (remainingQuotes.length == 0) {
       remainingQuotes = quotes.slice();
@@ -27,16 +22,25 @@ function getRandomQuote() {
   return quote;
 }
 
-// Gets a quote.
-function printQuote() {
+// Find a random quote, build a message, and push the message into the HTML.
+const printQuote = () => {
   let randQuote = getRandomQuote();
-  let quoteBox = document.getElementById('quote-box');
   let message = `<p class="quote"> ` + randQuote.quote + ` </p>
   <p class="source"> ` + randQuote.source+ `</p>`;
-  quoteBox.innerHTML = message;
+  document.getElementById('quote-box').innerHTML = message;
 }
 
+/////////////////////////
+// END OF OF FUNCTIONS //
+/////////////////////////
+
+// Initialize a copy of the quotes array.
+// Its purpose is to hold the remaining quotes that haven't been shown yet.
+// It will get refilled after all quotes are viewed.
+let remainingQuotes = quotes.slice();
+// Display the initial quote.
+printQuote();
+// Make the button interactive.
 document.getElementById("button").addEventListener("click", function(){
     printQuote();
 });
-printQuote();
